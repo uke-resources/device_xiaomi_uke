@@ -1,0 +1,38 @@
+//
+// Copyright (C) 2023 Paranoid Android
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+android_app {
+    name: "XiaomiParts",
+    certificate: "platform",
+    srcs: ["src/**/*.java"],
+    platform_apis: true,
+    privileged: true,
+    system_ext_specific: true,
+    static_libs: [
+        "androidx.core_core",
+    ],
+    required: [
+        "xiaomi-pen",
+        "xiaomi-focus-pen-filter",
+    ],
+}
+
+cc_binary {
+    name: "xiaomi-pen",
+    vendor: true,
+    srcs: [
+        "xiaomi-pen.cpp",
+    ],
+}
+
+cc_binary {
+    name: "xiaomi-focus-pen-filter",
+    vendor: true,
+    srcs: [
+        "xiaomi-focus-pen-filter.c",
+    ],
+    cflags: ["-Wall", "-Werror"],
+}

@@ -1,0 +1,50 @@
+on post-fs-data
+    # for primary panel
+    chown system system /sys/class/mi_display/disp-DSI-0/wp_info
+    chmod 0444 /sys/class/mi_display/disp-DSI-0/wp_info
+    chown system system /sys/class/mi_display/disp-DSI-0/brightness_clone
+    chmod 0664 /sys/class/mi_display/disp-DSI-0/brightness_clone
+    chown system system /sys/class/mi_display/disp-DSI-0/max_brightness_clone
+    chmod 0664 /sys/class/mi_display/disp-DSI-0/max_brightness_clone
+    # for secondary panel
+    chown system system /sys/class/mi_display/disp-DSI-1/wp_info
+    chmod 0444 /sys/class/mi_display/disp-DSI-1/wp_info
+    chown system system /sys/class/mi_display/disp-DSI-1/brightness_clone
+    chmod 0664 /sys/class/mi_display/disp-DSI-1/brightness_clone
+    chown system system /sys/class/mi_display/disp-DSI-1/max_brightness_clone
+    chmod 0664 /sys/class/mi_display/disp-DSI-1/max_brightness_clone
+    # display backlight sysfs node for ddsi and dp
+    chown system system /sys/class/backlight/panel2-backlight/brightness
+    chown system system /sys/class/backlight/panel2-backlight/max_brightness
+    chown system system /sys/class/backlight/panel3-backlight/brightness
+    chown system system /sys/class/backlight/panel3-backlight/max_brightness
+    chown system system /sys/class/backlight/DP1-backlight/brightness
+    chown system system /sys/class/backlight/DP1-backlight/max_brightness
+    chown system system /sys/class/backlight/DP2-backlight/brightness
+    chown system system /sys/class/backlight/DP2-backlight/max_brightness
+
+service vendor.pen-events /vendor/bin/init.pen.events.sh
+    class late_start
+    user root
+    group root system input
+    disabled
+    oneshot
+
+service vendor.xiaomi_pen /vendor/bin/xiaomi-pen
+    class main
+    user root
+    group system
+    oneshot
+
+service vendor.focus-pen-filter /vendor/bin/xiaomi-focus-pen-filter
+    class late_start
+    user root
+    group root system input uhid
+    disabled
+
+on property:sys.boot_completed=1
+    start vendor.pen-events
+    start vendor.focus-pen-filter
+
+on property:persist.pen.events.disabled=true
+    start vendor.pen-events
