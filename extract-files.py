@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+import os
+import re
+
 from extract_utils.file import File
 from extract_utils.fixups_blob import (
     BlobFixupCtx,
