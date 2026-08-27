@@ -199,7 +199,6 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/libmmcamera_lscv35.so',
         'vendor/lib64/libmmcamera_pdpc.so',
         'vendor/lib64/libopestriping.so',
-        'vendor/lib64/libpostprocinfo.so',
         'vendor/lib64/libsimulation.so',
         'vendor/lib64/libubifocus.so',
         'vendor/lib64/vendor.qti.hardware.camera.aon-service-impl.so',
@@ -207,6 +206,9 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so',
     ): blob_fixup()
         .replace_needed('android.hardware.graphics.allocator-V1-ndk.so', 'android.hardware.graphics.allocator-V2-ndk.so'),
+    'vendor/lib64/libpostprocinfo.so': blob_fixup()
+        .replace_needed('android.hardware.graphics.allocator-V1-ndk.so', 'android.hardware.graphics.allocator-V2-ndk.so')
+        .add_needed('libchifeature2.so'),
     (
        'vendor/etc/media_codecs_cliffs_v0.xml',
        'vendor/etc/media_codecs_cliffs_v1.xml',
@@ -223,6 +225,9 @@ blob_fixups: blob_fixups_user_type = {
     (
         'odm/lib64/libaudioroute_ext.so',
         'vendor/lib64/libagm.so',
+        'vendor/lib64/libar-pal.so',
+        'vendor/lib64/libfmpal.so',
+        'vendor/lib64/libhfp_pal.so',
         'vendor/lib64/libkaraokepal.so',
         'vendor/lib64/libmcs.so',
     ): blob_fixup()

@@ -58,6 +58,7 @@ PRODUCT_PACKAGES += \
     libfmpal \
     libhfp_pal \
     libhotword_intf \
+    libaudioroute-v34 \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
