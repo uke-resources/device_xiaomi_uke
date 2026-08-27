@@ -142,8 +142,10 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('AHardwareBuffer_lockPlanes')
         .clear_symbol_version('AHardwareBuffer_release')
         .clear_symbol_version('AHardwareBuffer_unlock'),
+    'vendor/lib64/com.qti.camx.chiiqutils.so': blob_fixup()
+        .replace_needed('android.hardware.graphics.allocator-V1-ndk.so', 'android.hardware.graphics.allocator-V2-ndk.so')
+        .add_needed('libcamx_shim.so'),
     (
-        'vendor/lib64/com.qti.camx.chiiqutils.so',
         'vendor/lib64/com.qti.chiusecaseselector.so',
         'vendor/lib64/com.qti.feature2.afbrckt.so',
         'vendor/lib64/com.qti.feature2.demux.so',

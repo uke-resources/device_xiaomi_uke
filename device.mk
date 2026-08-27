@@ -98,7 +98,8 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.device-V1-ndk.vendor \
-    android.hardware.camera.metadata-V2-ndk.vendor
+    android.hardware.camera.metadata-V2-ndk.vendor \
+    libcamx_shim
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.concurrent.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.concurrent.xml \
