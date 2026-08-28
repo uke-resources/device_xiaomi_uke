@@ -20,7 +20,7 @@
 /dev/mi_display/disp_log                                                                u:object_r:vendor_displaylog_device:s0
 /(vendor|system/vendor)/bin/displayfeature                                              u:object_r:vendor_displayfeature_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.xiaomi\.hardware\.displayfeature_aidl-service    u:object_r:vendor_hal_displayfeature_xiaomi_default_exec:s0
-/sys/devices/virtual/mi_display/disp_feature/disp-DSI-+[0-1](/.*)?                      u:object_r:vendor_sysfs_displayfeature:s0
+/sys/devices/virtual/mi_display/disp_feature/disp-DSI-[0-1](/.*)?                      u:object_r:vendor_sysfs_displayfeature:s0
 
 # Hypsys
 /vendor/bin/hw/xiaomi\.system\.hypsys\.common-service    u:object_r:hal_hypsys_vendor_exec:s0
@@ -58,9 +58,9 @@
 
 # Thermal
 /data/vendor/thermal(/.*)?                                               u:object_r:thermal_data_file:s0
-/sys/{class,devices/virtual}/thermal/thermal_message/flash_state         u:object_r:sys_thermal_flash_state:s0
-/sys/{class,devices/virtual}/thermal/thermal_message/torch_real_level    u:object_r:sys_thermal_torch_real_level:s0
-/sys/{class,devices/virtual}/thermal/thermal_message/wifi_limit          u:object_r:sys_thermal_wifi_limit:s0
+/sys/(class|devices/virtual)/thermal/thermal_message/flash_state         u:object_r:sys_thermal_flash_state:s0
+/sys/(class|devices/virtual)/thermal/thermal_message/torch_real_level    u:object_r:sys_thermal_torch_real_level:s0
+/sys/(class|devices/virtual)/thermal/thermal_message/wifi_limit          u:object_r:sys_thermal_wifi_limit:s0
 /sys/powersave(/.*)?                                                     u:object_r:sysfs_power_save:s0
 /vendor/bin/mi_thermald                                                  u:object_r:mi_thermald_exec:s0
 
