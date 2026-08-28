@@ -374,15 +374,14 @@ PRODUCT_PACKAGES += \
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/uke/uke-vendor.mk)
 
-# Xiaomi Keyboard Framework Layouts
+# Xiaomi Keyboard and Pen Framework Layouts
 PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/keyboard/NVTCapacitivePenM80p-merged.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/NVTCapacitivePenM80p-merged.idc \
+    $(DEVICE_PATH)/keyboard/NVTCapacitivePenM80p.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/NVTCapacitivePenM80p.idc \
+    $(DEVICE_PATH)/keyboard/NVTCapacitivePenP81c.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/NVTCapacitivePenP81c.idc \
     $(DEVICE_PATH)/keyboard/Vendor_15d9_Product_00a3.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/Vendor_15d9_Product_00a3.idc
 
 # Overlays
 PRODUCT_PACKAGES += \
     FrameworksResUke \
     SettingsProviderResUke
-
-# Soong namespaces
-PRODUCT_SOONG_NAMESPACES += \
-    $(DEVICE_PATH)
