@@ -128,7 +128,8 @@ PRODUCT_PACKAGES += \
 
 # Dolby
 PRODUCT_PACKAGES += \
-    DolbyAtmos
+    DolbyAtmos \
+    dolbycodec_shim
 
 # DRM
 PRODUCT_PACKAGES += \
