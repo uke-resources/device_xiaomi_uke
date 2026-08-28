@@ -276,9 +276,9 @@ vendor/etc/vintf/manifest/vendor.xiaomi.hardware.aidlbgservice-service.xml
 vendor/etc/vintf/manifest/vendor.xiaomi.hardware.dynamiccameraserver.xml
 vendor/etc/vintf/manifest/vendor.xiaomi.hardware.quickcamera.xml
 vendor/etc/external_camera_config.xml
-vendor/lib64/hw/camera.qcom.so;DUMMY_SHARED_LIB
-vendor/lib64/hw/com.qti.chi.offline.so;DUMMY_SHARED_LIB
-vendor/lib64/hw/com.qti.chi.override.so;DUMMY_SHARED_LIB
+vendor/lib64/hw/camera.qcom.so;DISABLE_CHECKELF
+vendor/lib64/hw/com.qti.chi.offline.so;DISABLE_CHECKELF
+vendor/lib64/hw/com.qti.chi.override.so;DISABLE_CHECKELF
 vendor/lib64/camx.device-impl.so;DISABLE_CHECKELF
 vendor/lib64/camx.provider-impl.so;DISABLE_CHECKELF
 vendor/lib64/com.qti.camx.chiiqutils.so;DISABLE_CHECKELF

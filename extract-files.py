@@ -120,8 +120,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('android.hardware.graphics.allocator-V1-ndk.so', 'android.hardware.graphics.allocator-V2-ndk.so'),
 
     (
-        'odm/lib64/libcamxcommonutils.so',
-        'odm/lib64/libmialgoengine.so',
+        'vendor/lib64/libcamxcommonutils.so',
+        'vendor/lib64/libmialgoengine.so',
         'vendor/lib64/libcameraopt.so',
     ): blob_fixup()
         .add_needed('libprocessgroup_shim.so'),
