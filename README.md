@@ -16,9 +16,6 @@
 | Rear Camera             | 13 MP, f/2.2, (wide), 1/3.06", 1.12µm, PDAF                                |
 | Front Camera            | 8 MP, f/2.3, (wide), 1/4.0", 1.12µm                                        |
 | Release Date            | October 2024                                                               |
-
 ## Device Picture
 
-![Xiaomi Pad 7](https://www.giztop.com/media/catalog/product/cache/97cc1143d2e20f2b0c8ea91aaa12053c/x/i/xiaomi_pad_7.png)
-![Xiaomi Pad 7](https://www.giztop.com/media/catalog/product/cache/97cc1143d2e20f2b0c8ea91aaa12053c/x/i/xiaomi_pad_7-.png)
-![Xiaomi Pad 7](https://www.giztop.com/media/catalog/product/cache/97cc1143d2e20f2b0c8ea91aaa12053c/x/i/xiaomi_pad_7-1.png)
+![Xiaomi Pad 7](configs/pad7.png)
