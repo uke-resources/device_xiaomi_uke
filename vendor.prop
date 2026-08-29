@@ -88,9 +88,11 @@ ro.bluetooth.a2dp_offload.supported=true
 
 # Camera
 camera.disable_zsl_mode=true
+persist.vendor.camera.privapp.list=org.lineageos.aperture
 ro.camera.disableHeicUltraHDR=true
 ro.camera.enableCamera1MaxZsl=1
 ro.camerax.extensions.enabled=true
+vendor.camera.aux.packagelist=org.lineageos.aperture,org.lineageos.aperture.dev
 
 # Chipset
 ro.soc.manufacturer=QTI

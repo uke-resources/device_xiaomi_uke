@@ -120,8 +120,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('android.hardware.graphics.allocator-V1-ndk.so', 'android.hardware.graphics.allocator-V2-ndk.so'),
 
     (
-        'vendor/lib64/libcamxcommonutils.so',
-        'vendor/lib64/libmialgoengine.so',
+        'odm/lib64/libcamxcommonutils.so',
+        'odm/lib64/libmialgoengine.so',
         'vendor/lib64/libcameraopt.so',
     ): blob_fixup()
         .add_needed('libprocessgroup_shim.so'),
@@ -142,10 +142,8 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('AHardwareBuffer_lockPlanes')
         .clear_symbol_version('AHardwareBuffer_release')
         .clear_symbol_version('AHardwareBuffer_unlock'),
-    'vendor/lib64/com.qti.camx.chiiqutils.so': blob_fixup()
-        .replace_needed('android.hardware.graphics.allocator-V1-ndk.so', 'android.hardware.graphics.allocator-V2-ndk.so')
-        .add_needed('libcamx_shim.so'),
     (
+        'vendor/lib64/com.qti.camx.chiiqutils.so',
         'vendor/lib64/com.qti.chiusecaseselector.so',
         'vendor/lib64/com.qti.feature2.afbrckt.so',
         'vendor/lib64/com.qti.feature2.demux.so',
@@ -201,6 +199,7 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/libmmcamera_lscv35.so',
         'vendor/lib64/libmmcamera_pdpc.so',
         'vendor/lib64/libopestriping.so',
+        'vendor/lib64/libpostprocinfo.so',
         'vendor/lib64/libsimulation.so',
         'vendor/lib64/libubifocus.so',
         'vendor/lib64/vendor.qti.hardware.camera.aon-service-impl.so',
@@ -208,9 +207,6 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so',
     ): blob_fixup()
         .replace_needed('android.hardware.graphics.allocator-V1-ndk.so', 'android.hardware.graphics.allocator-V2-ndk.so'),
-    'vendor/lib64/libpostprocinfo.so': blob_fixup()
-        .replace_needed('android.hardware.graphics.allocator-V1-ndk.so', 'android.hardware.graphics.allocator-V2-ndk.so')
-        .add_needed('libchifeature2.so'),
     (
        'vendor/etc/media_codecs_cliffs_v0.xml',
        'vendor/etc/media_codecs_cliffs_v1.xml',
