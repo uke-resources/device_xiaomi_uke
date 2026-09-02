@@ -1,15 +1,29 @@
 # Battery
-#genfscon sysfs /class/qcom-battery    u:object_r:vendor_sysfs_qcom_battery:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qcom,battery_charger/power_supply u:object_r:vendor_sysfs_qcom_battery:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qcom,ucsi/power_supply u:object_r:vendor_sysfs_qcom_battery:s0
 
 # Camera
 genfscon sysfs /module/camera/parameters/cam_cci_io_protect    u:object_r:vendor_sysfs_camera:s0
 genfscon sysfs /module/camera/parameters/ife_mqs_node1         u:object_r:vendor_sysfs_camera:s0
+
+# Display
+genfscon sysfs /devices/virtual/mi_display/disp_feature u:object_r:vendor_sysfs_displayfeature:s0
 
 # Keyboard
 genfscon sysfs /devices/virtual/keyboard/keypad/keyboard_status_param    u:object_r:sysfs_keyboard_status:s0
 
 # Perf
 genfscon proc /perflock_records    u:object_r:vendor_proc_perflock_records:s0
+
+# SSR
+genfscon sysfs /devices/platform/soc/3000000.remoteproc-adsp u:object_r:vendor_sysfs_ssr_coredump_toggle:s0
+genfscon sysfs /devices/platform/soc/32300000.remoteproc-cdsp u:object_r:vendor_sysfs_ssr_coredump_toggle:s0
+
+# Thermal
+genfscon sysfs /devices/virtual/thermal/thermal_message/flash_state u:object_r:sys_thermal_flash_state:s0
+genfscon sysfs /devices/virtual/thermal/thermal_message/torch_real_level u:object_r:sys_thermal_torch_real_level:s0
+genfscon sysfs /devices/virtual/thermal/thermal_message/wifi_limit u:object_r:sys_thermal_wifi_limit:s0
+genfscon sysfs /powersave u:object_r:sysfs_power_save:s0
 
 # Touch
 genfscon proc /tp_fw_version                                           u:object_r:proc_tp_file:s0
@@ -24,3 +38,7 @@ genfscon sysfs /devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a90000.spi/spi_
 genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-00/c42d000.qcom,spmi:qcom,pmk8550@0:pon_hlos@1300/c42d000.qcom,spmi:qcom,pmk8550@0:pon_hlos@1300:pwrkey-bark/wakeup          u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-00/c42d000.qcom,spmi:qcom,pmk8550@0:pon_hlos@1300/c42d000.qcom,spmi:qcom,pmk8550@0:pon_hlos@1300:pwrkey-resin-bark/wakeup    u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/8c0000.qcom,qupv3_1_geni_se/890000.i2c/i2c-7/7-0057/wakeup                                                                                              u:object_r:sysfs_wakeup:s0
+
+# USB
+genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qcom,ucsi/typec u:object_r:vendor_sysfs_usb_c:s0
+
