@@ -229,17 +229,8 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/libmcs.so',
     ): blob_fixup()
         .replace_needed('libaudioroute.so', 'libaudioroute-v34.so'),
-    (
-        'vendor/lib64/c2.dolby.hevc.dec.so',
-        'vendor/lib64/c2.dolby.hevc.sec.dec.so',
-        'vendor/lib64/libqcodec2_core.so',
-    ): blob_fixup()
+    'vendor/lib64/libqcodec2_core.so': blob_fixup()
         .add_needed('libcodec2_shim.so'),
-    (
-        'vendor/bin/hw/dolbycodec2',
-        'vendor/bin/hw/vendor.dolby_3_12.media.c2@1.0-service',
-    ): blob_fixup()
-        .replace_needed('libutils.so', 'libutils_vendor.so'),
     (
         'vendor/lib64/libVoiceSdk.so',
         'vendor/lib64/libcapiv2uvvendor.so',
@@ -275,8 +266,6 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libprotobuf-cpp-full.so', 'libprotobuf-cpp-full-21.7.so'),
     'vendor/etc/ueventd.rc': blob_fixup()
         .add_line_if_missing('\n# Charger\n/sys/class/qcom-battery     night_charging            0660    system  system'),
-    'vendor/lib64/c2.dolby.client.so': blob_fixup()
-        .add_needed('dolbycodec_shim.so'),
     'vendor/lib64/com.qti.feature2.anchorsync.so': blob_fixup()
         .replace_needed('android.hardware.graphics.allocator-V1-ndk.so', 'android.hardware.graphics.allocator-V2-ndk.so')
         .replace_needed('libtinyxml2.so', 'libtinyxml2_1.so'),
