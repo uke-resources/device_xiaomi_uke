@@ -1,6 +1,10 @@
 # Audio
 persist.audio.button_jack.profile=volume
 persist.audio.button_jack.switch=0
+ro.audio.spatializer_enabled=true
+ro.audio.stereo_spatialization_enabled=true
+ro.audio.spatializer_binaural_enabled_default=true
+ro.audio.spatializer_transaural_enabled_default=true
 use.voice.path.for.pcm.voip=true
 
 # Bluetooth

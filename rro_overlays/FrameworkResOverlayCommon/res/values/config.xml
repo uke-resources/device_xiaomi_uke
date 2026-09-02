@@ -49,6 +49,19 @@
     <!-- Whether the Unprocessed audio source supports the required frequency range and level -->
     <bool name="config_supportAudioSourceUnprocessed">true</bool>
 
+    <!-- Array of audio device types that support spatialization by default -->
+    <string-array name="config_spatializer_supported_devices" translatable="false">
+        <item>audio_device_out_speaker</item>
+        <item>audio_device_out_wired_headset</item>
+        <item>audio_device_out_wired_headphones</item>
+        <item>audio_device_out_bluetooth_a2dp</item>
+        <item>audio_device_out_ble_headset</item>
+        <item>audio_device_out_ble_speaker</item>
+        <item>audio_device_out_ble_broadcast</item>
+        <item>audio_device_out_usb_headset</item>
+        <item>audio_device_out_usb_device</item>
+    </string-array>
+
     <!-- If this is true, the screen will come on when you unplug usb/power/whatever. -->
     <bool name="config_unplugTurnsOnScreen">true</bool>
 
