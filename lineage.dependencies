@@ -2,5 +2,10 @@
   {
     "repository": "android_hardware_xiaomi",
     "target_path": "hardware/xiaomi"
+  },
+  {
+    "repository": "hardware_dolby",
+    "target_path": "hardware/dolby",
+    "branch": "bose_dolby"
   }
 ]

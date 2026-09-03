@@ -125,6 +125,9 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.composer3-V2-ndk.vendor \
     vendor.qti.hardware.display.composer3-V1-ndk.vendor
 
+# Dolby
+$(call inherit-product, hardware/dolby/dolby.mk)
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
