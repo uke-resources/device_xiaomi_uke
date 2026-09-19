@@ -87,6 +87,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml
 
+# Dolby
+$(call inherit-product-if-exists, hardware/dolby/dolby.mk)
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     audio.bluetooth.default
